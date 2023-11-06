@@ -1,0 +1,10 @@
+<div class="cards">
+  <app-card
+    class="card"
+    *ngFor="let item of cards"
+    [product]="item"
+    [category]="category"
+    [searchText]="vitalText"
+    [ngClass]="category == item.type || category == '' ? 'yes' : 'no'"
+  ></app-card>
+</div>

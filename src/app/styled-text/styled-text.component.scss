@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap");
+.stext {
+  height: 30vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  h1 {
+    font-size: 60px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    text-shadow: 4px 10px #d6eefc;
+    line-height: 1;
+    user-select: none;
+  }
+}
+
+@media (max-width: 899px) and (min-width: 500px) {
+  .stext {
+    height: 20vh;
+    h1 {
+      font-size: 40px;
+    }
+  }
+}

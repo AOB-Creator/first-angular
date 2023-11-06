@@ -1,0 +1,12 @@
+<div class="sizes">
+  <div class="size" *ngFor="let size of sizes">
+    <input
+      type="radio"
+      name="size"
+      [id]="size"
+      [value]="size"
+      (change)="onChangeType($event)"
+    />
+    <label [for]="size">{{ size }}</label>
+  </div>
+</div>

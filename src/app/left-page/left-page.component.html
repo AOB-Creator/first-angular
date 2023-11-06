@@ -1,0 +1,15 @@
+<div class="leftpage">
+  <div class="container">
+    <app-navigation
+      (checkedTypeEmit)="onProductCategory($event)"
+    ></app-navigation>
+    <app-searchbar
+      (searchTextChangerEvent)="onSearchText($event)"
+    ></app-searchbar>
+    <app-styled-text></app-styled-text>
+    <app-cards
+      [vitalText]="searchedText"
+      [category]="productCategory"
+    ></app-cards>
+  </div>
+</div>

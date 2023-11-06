@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.sticker {
+  width: 100px;
+  height: 100px;
+  font-family: "Inter", sans-serif !important;
+
+  position: absolute;
+  right: 0;
+  top: 18%;
+  h1 {
+    padding: 3px 0;
+    font-weight: 300;
+  }
+  p {
+    font-weight: 400 !important;
+    font-size: 13px;
+    padding-top: 7px;
+    text-transform: uppercase;
+    position: relative;
+    &::after {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    &::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background-color: black;
+      position: absolute;
+      border-radius: 50%;
+      left: -4px;
+      top: -3px;
+    }
+  }
+}

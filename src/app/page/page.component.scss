@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.pages {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+
+  .left {
+    flex: 3;
+    background-color: #edf3f8;
+  }
+  .right {
+    background-color: #b6e2f8;
+    flex: 1.5;
+  }
+}
+
+@media (max-width: 700px) and (min-width: 500px) {
+  .pages {
+    align-items: center;
+    flex-direction: column;
+  }
+}

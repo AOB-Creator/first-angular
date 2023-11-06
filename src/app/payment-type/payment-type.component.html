@@ -1,0 +1,35 @@
+<div class="payment">
+  <h4>Payment method</h4>
+
+  <input
+    type="radio"
+    name="payment"
+    id="credit"
+    value="paypal"
+    [ngModel]="paymentType"
+    (change)="onChangerTyper($event)"
+  />
+
+  <label for="credit" class="credit">
+    <div class="img">
+      <img src="../../assets/images/paypal.png" alt="" />
+    </div>
+    <p>Paypal</p>
+  </label>
+
+  <input
+    type="radio"
+    name="payment"
+    [ngModel]="paymentType"
+    value="credit"
+    id="paypal"
+    (change)="onChangerTyper($event)"
+  />
+
+  <label for="paypal" class="credit">
+    <div class="img">
+      <img src="../../assets/images/credit-card.png" alt="" />
+    </div>
+    <p>Credit Card</p>
+  </label>
+</div>

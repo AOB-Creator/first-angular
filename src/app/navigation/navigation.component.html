@@ -1,0 +1,53 @@
+<div class="navigation">
+  <div class="img">
+    <img src="../../assets/images/logo.png" alt="" />
+  </div>
+  <ul>
+    <li>
+      <input
+        type="radio"
+        name="type"
+        id="men"
+        checked
+        [ngModel]="checkedType"
+        value="men"
+        (change)="changed($event)"
+      />
+      <label for="men">men</label>
+    </li>
+
+    <li>
+      <input
+        type="radio"
+        name="type"
+        id="women"
+        value="women"
+        (change)="changed($event)"
+        [ngModel]="checkedType"
+      />
+      <label for="women">Women</label>
+    </li>
+    <li>
+      <input
+        type="radio"
+        name="type"
+        id="kid"
+        [ngModel]="checkedType"
+        value="kids"
+        (change)="changed($event)"
+      />
+      <label for="kid">Kid</label>
+    </li>
+    <li>
+      <input
+        type="radio"
+        name="type"
+        id="all"
+        [ngModel]="checkedType"
+        value=""
+        (change)="changed($event)"
+      />
+      <label for="all">All</label>
+    </li>
+  </ul>
+</div>

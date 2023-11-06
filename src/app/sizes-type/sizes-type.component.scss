@@ -1,0 +1,28 @@
+.sizes {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  .size {
+    input {
+      display: none;
+    }
+    label {
+      width: 25px;
+      height: 25px;
+      display: inline-block;
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      margin-right: 10px;
+      user-select: none;
+      cursor: pointer;
+    }
+    input:checked + label {
+      background-color: rgb(0, 0, 0);
+      color: rgb(255, 255, 255);
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<div class="howmany">
+  <div class="number">{{ howmany }}</div>
+  <div class="btns">
+    <button class="btn1" (click)="onclick('+')">+</button>
+    <button class="btn2" (click)="onclick('-')">-</button>
+  </div>
+  <p class="alerted" [ngClass]="alertdata ? 'yes' : 'no'">
+    Only We have {{ quantity }} remained products
+  </p>
+</div>

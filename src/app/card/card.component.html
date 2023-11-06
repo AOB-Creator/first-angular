@@ -1,0 +1,23 @@
+<div
+  class="table"
+  (click)="onClickSelect()"
+  *ngIf="product.name.toLowerCase().includes(searchText)"
+>
+  <div class="img">
+    <img src="{{ product.image }}" alt="" />
+  </div>
+  <div class="text">
+    <h4>{{ product.name }}</h4>
+    <p class="price">$ {{ product.price }}</p>
+    <div class="sizes">
+      Sizes:
+      <h6 *ngFor="let item of product.sizes">{{ item }}</h6>
+    </div>
+    <h6>For: {{ product.type }}</h6>
+    <div class="btns">
+      <button>Buy me</button>
+    </div>
+  </div>
+</div>
+
+<!-- ngClass="product.name.toLowerCase().includes(searchText)?'':'no'" -->

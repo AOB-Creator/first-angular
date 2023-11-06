@@ -1,0 +1,10 @@
+@mixin dsf($ai: center, $js: center) {
+  display: flex;
+  align-items: $ai;
+  justify-content: $js;
+}
+.paypal {
+  background-color: #ffffff;
+  height: 50vh;
+  @include dsf();
+}

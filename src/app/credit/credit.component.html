@@ -1,0 +1,38 @@
+<div class="credit">
+  <form
+    action=""
+    [formGroup]="paymentStatusState"
+    (ngSubmit)="letsBuyThisProduct()"
+  >
+    <p *ngIf="paymentStatusState.invalid" class="alert-text">
+      All forms should be filled !!!
+    </p>
+    <div class="name">
+      <input type="text" placeholder="Firstname" formControlName="firstName" />
+
+      <input type="text" placeholder="Lastname" formControlName="lastName" />
+    </div>
+    <div class="card-number">
+      <input
+        type="text"
+        placeholder="xxxx xxxx xxxx xxxx"
+        formControlName="cardN"
+      />
+    </div>
+    <div class="details">
+      <input type="text" placeholder="CVV" formControlName="cvvnumber" />
+      <input
+        type="text"
+        placeholder="Expire Date"
+        formControlName="expireData"
+      />
+    </div>
+    <button
+      type="submit"
+      [ngClass]="paymentStatusState.invalid ? 'lock' : 'unlock'"
+      class="pay"
+    >
+      Pay
+    </button>
+  </form>
+</div>

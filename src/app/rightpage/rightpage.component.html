@@ -1,0 +1,86 @@
+<div class="rightpage">
+  <!-- <div class="topinfo">
+    <div class="image">
+      <img [src]="selectedItem.image" alt="" />
+    </div>
+    <h4 class="name">{{ selectedItem.name }}</h4>
+    <h5 class="price">${{ selectedItem.price }}</h5>
+  </div> -->
+  <app-topinfo [selectedItem]="selectedItem"></app-topinfo>
+
+  <form class="descr" [formGroup]="reactiveForm">
+    <h4 class="brand">{{ selectedItem.name }}</h4>
+    <div class="currency">
+      <p class="price">
+        {{ (selectedItem.price * rate * howmanytobuy).toFixed(1) }}
+        {{ currency }}
+      </p>
+      <select
+        class=""
+        name=""
+        id=""
+        (change)="calculateMoney()"
+        formControlName="selectedCurrency"
+      >
+        <option value="UZS">UZS</option>
+        <option value="KZT">KZT</option>
+        <option value="USD">USD</option>
+        <option value="RUB">RUB</option>
+      </select>
+    </div>
+
+    <!-- sizes -->
+    <app-sizes-type
+      [sizes]="selectedItem.sizes"
+      (selectedSizeProduct)="onselectedSizeProduct($event)"
+    ></app-sizes-type>
+    <div class="description">
+      <h4>Description</h4>
+      <p>{{ selectedItem.description }}</p>
+    </div>
+    <!-- payment  -->
+    <app-howmany
+      [quantity]="selectedItem.amount"
+      (howManyProductsToBuy)="onhowManyProductsToBuy($event)"
+    ></app-howmany>
+
+    <app-payment-type
+      (selectedPaymentType)="onselectedPaymentType($event)"
+    ></app-payment-type>
+  </form>
+  <app-credit *ngIf="payment == 'credit'"></app-credit>
+  <app-paypal *ngIf="payment == 'paypal'"></app-paypal>
+</div>
+
+<!-- <div class="sizes">
+      <div class="size" *ngFor="let size of selectedItem.sizes">
+        <input type="radio" name="size" [id]="size" formControlName="size" />
+        <label [for]="size">{{ size }}</label>
+      </div>
+  </div> -->
+
+<!-- <div class="payment">
+      <h4>Payment method</h4>
+
+      <input
+        type="radio"
+        name="payment"
+        id="credit"
+        value="credit"
+        formControlName="payment"
+      />
+      <label for="credit" class="credit">
+        <div class="img">
+          <img src="../../assets/images/paypal.png" alt="" />
+        </div>
+        <p>Paypal</p>
+      </label>
+
+      <input type="radio" name="payment" id="paypal" />
+      <label for="paypal" class="credit">
+        <div class="img">
+          <img src="../../assets/images/credit-card.png" alt="" />
+        </div>
+        <p>Credit Card</p>
+      </label>
+    </div> -->
